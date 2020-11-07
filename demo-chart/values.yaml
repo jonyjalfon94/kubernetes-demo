@@ -2,4 +2,4 @@ ingress:
   path: /apple
 
 pod:
-  container_text: apple
+  container_text: -text=apple
