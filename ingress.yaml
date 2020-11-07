@@ -9,7 +9,7 @@ spec:
   rules:
   - http:
       paths:
-        - path: /dogs
+        - path: /apple
           pathType: Prefix
           backend:
             service:
