@@ -10,7 +10,7 @@ spec:
   - http:
       paths:
         - path: /dogs
-          pathtype: Prefix
+          pathType: Prefix
           backend:
             service:
               name: apple-service
