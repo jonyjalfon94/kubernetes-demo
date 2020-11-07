@@ -2,9 +2,9 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: apple-service
+  name: {{ .Release.Name }}-{{ .Chart.Name }}
 spec:
   selector:
-    app: apple
+    app: {{ .Release.Name }}-{{ .Chart.Name }}-app
   ports:
     - port: 5678 # Default port for image

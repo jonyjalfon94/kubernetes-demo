@@ -1,0 +1,13 @@
+---
+kind: Pod
+apiVersion: v1
+metadata:
+  name: {{ .Release.Name }}-{{ .Chart.Name }}-app
+  labels:
+    app: {{ .Release.Name }}-{{ .Chart.Name }}-app
+spec:
+  containers:
+    - name: {{ .Release.Name }}-{{ .Chart.Name }}-app
+      image: hashicorp/http-echo
+      args:
+        - {{ .Values.pod.container_args }}

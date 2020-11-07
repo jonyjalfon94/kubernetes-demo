@@ -1,0 +1,6 @@
+ingress:
+  path: /apple
+  serviceName: apple-service
+
+pod:
+  container_args: -text=apple

@@ -1,14 +1,14 @@
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  name: app-ingress
+  name: {{ .Release.Name }}-{{ .Chart.Name }}-ingress
   annotations:
     ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
   - http:
       paths:
-        - path: /apple
+        - path: {{ .Values.ingress.path }}
           backend:
-            serviceName: apple-service
+            serviceName: {{ .Values.ingress.serviceName }}
             servicePort: 5678
