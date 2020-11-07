@@ -4,7 +4,7 @@ apiVersion: v1
 metadata:
   name: {{ .Release.Name }}-{{ .Chart.Name }}-service
 spec:
-  {{{{- if .Values.ingress_enabled == false -}}
+  {{- if .Values.ingress_enabled == false -}}
   type: LoadBalancer
   {{- end -}}
   selector:
