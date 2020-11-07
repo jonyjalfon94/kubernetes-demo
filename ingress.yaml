@@ -11,5 +11,7 @@ spec:
       paths:
         - path: /dogs
           backend:
-            serviceName: apple-service
-            servicePort: 5678
+            service:
+              name: apple-service
+              port:
+                number: 5678
