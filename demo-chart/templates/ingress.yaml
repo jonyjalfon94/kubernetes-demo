@@ -1,4 +1,4 @@
-{{ {{- if .ingress_enabled -}}
+{{- if .ingress_enabled true -}}
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
