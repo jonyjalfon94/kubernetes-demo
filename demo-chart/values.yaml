@@ -1,3 +1,4 @@
+ingress_enabled: true
 ingress:
   path: /apple
 
