@@ -6,6 +6,6 @@ metadata:
 spec:
   type: NodePort
   selector:
-    app: apple
+    app: apple-app
   ports:
     - port: 5678 # Default port for image
