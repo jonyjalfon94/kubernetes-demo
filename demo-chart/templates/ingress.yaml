@@ -1,4 +1,4 @@
-{{ if eq .ingress_enabled true }}
+{{- if .ingress_enabled true }}
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
@@ -13,5 +13,4 @@ spec:
           backend:
             serviceName: {{ .Release.Name }}-{{ .Chart.Name }}-service
             servicePort: 5678
-
-{{ end }}
+{{- end }}
