@@ -10,5 +10,5 @@ spec:
       paths:
         - path: {{ .Values.ingress.path }}
           backend:
-            serviceName: {{ .Values.ingress.serviceName }}
+            serviceName: {{ .Release.Name }}-{{ .Chart.Name }}-service
             servicePort: 5678

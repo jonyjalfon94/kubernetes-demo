@@ -2,7 +2,7 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: {{ .Release.Name }}-{{ .Chart.Name }}
+  name: {{ .Release.Name }}-{{ .Chart.Name }}-service
 spec:
   selector:
     app: {{ .Release.Name }}-{{ .Chart.Name }}-app
