@@ -1,7 +1,7 @@
 
 ingress:
-  path: /apple
   enabled: true
+  path: /apple
 
 pod:
-  container_text: apple
+  text: apple

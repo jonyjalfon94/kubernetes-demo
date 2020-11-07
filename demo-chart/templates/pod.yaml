@@ -1,6 +1,5 @@
----
-kind: Pod
 apiVersion: v1
+kind: Pod
 metadata:
   name: {{ .Release.Name }}-{{ .Chart.Name }}-app
   labels:
