@@ -1,3 +1,3 @@
 name: fruit
-description: A basic NGINX HTTP server
+description: A basic http-echo server.
 version: 0.1.0
