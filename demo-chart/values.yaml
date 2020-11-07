@@ -3,4 +3,4 @@ ingress:
   serviceName: apple-service
 
 pod:
-  container_args: "-text=apple"
+  container_text: apple
