@@ -1,3 +1,4 @@
+apiVersion: v1
 name: fruit
 description: A basic http-echo server.
 version: 0.1.0
