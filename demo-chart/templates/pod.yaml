@@ -3,8 +3,8 @@ kind: Pod
 metadata:
   name: {{ .Release.Name }}-{{ .Chart.Name }}-app
   labels:
-    app: {{ .Release.Name }}-{{ .Chart.Name }}-app
 {{ include "fruitapp.labels" . | indent 4 }}
+    app: {{ .Release.Name }}-{{ .Chart.Name }}-app
 spec:
   containers:
     - name: {{ .Release.Name }}-{{ .Chart.Name }}-app
