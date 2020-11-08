@@ -4,7 +4,34 @@ Demo application to demonstrate Helm / Ingress in Kubernetes.
 
 ### Prerequisites
 
-An ingress controller running in the cluster.
+A cloud hosted kubernetes cluster.
+Ingress Controller.
+
+### Setting up Ingress Controller (Nginx)
+
+  *  Create a namespace for the ingress-controller
+
+```
+kubectl create namespace ingress-nginx
+```
+
+  *  Deploy the ingress controller. (Note that in the url of the repository we are using a cloud deployment of the nginx ingress controller)
+
+```
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v0.35.0/deploy/static/provider/cloud/deploy.yaml -n ingress-nginx
+```
+
+  *  Verify the ingress controller was deployed
+
+```
+kubectl get pods -n ingress-nginx -l app.kubernetes.io/name=ingress-nginx --watch
+```
+
+  *  To get the ip inspect the ingress controller service
+
+```
+kubectl get svc ingress-nginx-controller -n ingress-nginx
+```
 
 ### Deployment options
 
