@@ -3,6 +3,8 @@ apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
   name: {{ .Release.Name }}-{{ .Chart.Name }}-ingress
+  labels:
+{{ include "fruitapp.labels" . | indent 4 }}
   annotations:
     ingress.kubernetes.io/rewrite-target: /
 spec:

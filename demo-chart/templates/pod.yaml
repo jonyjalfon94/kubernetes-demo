@@ -4,6 +4,7 @@ metadata:
   name: {{ .Release.Name }}-{{ .Chart.Name }}-app
   labels:
     app: {{ .Release.Name }}-{{ .Chart.Name }}-app
+{{ include "fruitapp.labels" . | indent 4 }}
 spec:
   containers:
     - name: {{ .Release.Name }}-{{ .Chart.Name }}-app
