@@ -34,6 +34,18 @@ kubectl get svc ingress-nginx-controller -n ingress-nginx
 
 ### Deployment options
 
+  *  First create a namespace to deploy all applications
+  
+  ```
+  kubectl create ns dev
+  ```
+  
+  *  Change into dev namespace
+  
+  ```
+  kubectl config set-context --current --namespace dev
+  ```
+
   *  Deploy using default values and a random release name:
 
 ```
@@ -57,4 +69,30 @@ helm install --name release-name ./fruit/ --set ingress.enabled=false --set pod.
 
 ```
 helm install --name release-name ./fruit/ -f ./path/to/file
+```
+
+### Cleanup
+
+  *  Delete all nginx ingress controller resources
+  
+```
+kubectl delete all --all --namespace ingress-nginx
+```
+
+  *  Delete ingress-nginx namespace
+  
+```
+kubectl delete ns ingress-nginx
+```
+
+  *  Delete all application resources from dev namespace
+  
+```
+kubectl delete all --all --namespace dev
+```
+
+  *  Delete all helm releases
+ 
+ ```
+ helm ls --all --short | xargs -L1 helm delete --purge
 ```
