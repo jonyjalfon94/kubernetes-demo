@@ -9,4 +9,4 @@ spec:
     - name: {{ .Release.Name }}-{{ .Chart.Name }}-app
       image: hashicorp/http-echo
       args:
-        - "-text={{ .Values.pod.container_text }}"
+        - "-text={{ .Values.pod.text }}"
